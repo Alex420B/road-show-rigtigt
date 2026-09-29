@@ -39,6 +39,26 @@ const cars = [
       color: "Lyseblå",
       fuel: "Diesel",
       sound: "sound/blue-car-sound.wav"
+    },
+
+    {
+      id: "bus",
+      brand: "big",
+      model: "boy",
+      year: 1969,
+      color: "gul",
+      fuel: "Diesel",
+      sound: "sound/bus-sound.wav"
+    },
+
+    {
+      id: "truck",
+      brand: "huge",
+      model: "gal",
+      year: 1967,
+      color: "gul",
+      fuel: "Diesel",
+      sound: "sound/truck-sound.wav"
     }
 
 

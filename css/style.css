@@ -25,6 +25,8 @@
    */
 --sun-size:100px;
 --car-w: 200px;
+--bus-w:260px;
+--truck-w:300px;
 }
 
 /* ---------------------------------------------------------
@@ -132,7 +134,9 @@
 --------------------------------------------------------- */
 .car1,
 .car2,
-.car3 {
+.car3,
+.bus,
+.truck {
    position: absolute;
    width: var(--car-w);
    max-width: 28vw;
@@ -312,6 +316,17 @@
    Undersøg selv: hvad sker der, hvis du alligevel tilføjer den?
 */
 
+.bus {
+   bottom: 2.8vh;
+   right: -30vw; /* starter 30vw uden for skærmen til højre */
+   animation: bus 20s linear infinite; 
+  }
+
+@keyframes bus {
+   0%   { transform: translateX(0); }
+   100% { transform: translateX(-130vw); }
+   
+   }
 
 
 /* ---------------------------------------------------------
@@ -331,7 +346,17 @@
    OBS: truck'en vender også rigtigt i billedfilen, så du skal IKKE
    bruge rotateY(180deg) her.
 */
+.truck {
+   bottom: -3.4vh;
+   left: -30vw; /* starter 30vw uden for skærmen til venstre */
+   animation: truck 8s linear infinite;
+   animation-delay: 4s;
+}
 
+@keyframes truck {
+   0%   { transform: translateX(0) rotateY(180deg); }
+   100% { transform: translateX(130vw) rotateY(180deg); }
+   }
 
 
 /* ---------------------------------------------------------
